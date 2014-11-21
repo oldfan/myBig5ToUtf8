@@ -32,8 +32,8 @@ func main() {
 	defer outfile.Close()
 
 	for {
-		inputString, Error := inputReader.ReadString('\n')
-		if Error == io.EOF {
+		inputString, err := inputReader.ReadString('\n')
+		if err == io.EOF {
 			fmt.Println("轉換完成")
 			//fmt.Println(newstr)
 			return
